@@ -1,0 +1,1 @@
+{"name": "При вводе двух разных адресов отображается блок выбора маршрута", "status": "skipped", "start": 1783325164305, "stop": 1783325164305, "uuid": "69738649-1f5a-4c04-9b3d-e3b268b74f0c", "testCaseId": "2ab6b574cc3ea0b7f44563cc78e98868", "fullName": "tests.test_route_selection_block.TestRouteSelectionBlockDisplay#test_route_block_visible_for_different_addresses"}
