@@ -32,7 +32,6 @@ class BasePage:
         self._wait(timeout).until(EC.element_to_be_clickable(locator)).click()
 
     def click_js(self, locator, timeout: int = DEFAULT_TIMEOUT) -> None:
-        """Клик через JS — обходит перекрытие элемента оверлеем."""
         element = self.find(locator, timeout)
         self.driver.execute_script("arguments[0].click();", element)
 
@@ -45,10 +44,6 @@ class BasePage:
         return self.find(locator, timeout).text
 
     def get_text_content(self, locator, timeout: int = DEFAULT_TIMEOUT) -> str:
-        """
-        textContent через JS вместо .text — не зависит от того, считает ли Selenium
-        элемент видимым (.text возвращает '' для невидимых/переходных по CSS элементов).
-        """
         element = self.find(locator, timeout)
         return (self.driver.execute_script("return arguments[0].textContent;", element) or "").strip()
 

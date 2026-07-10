@@ -12,7 +12,6 @@ PRICE_ROW_VALUE = (
 
 
 def order_button(button_label: str):
-    """Кнопки 'Отменить'/'Детали' — одна разметка (button.order-button + подпись рядом)."""
     return (
         By.XPATH,
         f".//div[contains(@class,'order-btn-group')][.//div[text()='{button_label}']]//button",

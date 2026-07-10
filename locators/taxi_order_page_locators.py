@@ -31,7 +31,6 @@ def tariff_price(tariff_name: str):
 
 
 def tooltip_description(tooltip_id: str):
-    """tooltip_id — значение атрибута data-for иконки тарифа, известное только в рантайме."""
     return (By.CSS_SELECTOR, f"#{tooltip_id} .i-dPrefix")
 
 
